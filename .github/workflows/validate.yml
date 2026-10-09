@@ -1,0 +1,28 @@
+name: 品牌系统规则检查
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出项目
+        uses: actions/checkout@v4
+      - name: 使用锁定的 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - name: 校验清单和项目结构
+        run: |
+          python -I scripts/check-manifests.py
+          python -I scripts/check-system.py
+          python -I scripts/test-check-system.py
+          bash -n scripts/check-tools.sh
+
+# 不运行全套桌面工具检查，不访问账号，不构建或发布关联项目。
