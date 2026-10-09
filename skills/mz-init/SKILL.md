@@ -2,7 +2,7 @@
 name: mz-init
 description: 用于初始化、接续或核对「智能时代蛮子」品牌系统；登记平台与授权，确认意向，检查配置，不创建内容作品或操作平台。
 metadata:
-  version: '0.1.0'
+  version: '0.1.2'
   title: 蛮子品牌初始化
 ---
 
@@ -14,10 +14,10 @@ metadata:
 
 ## 流程
 
-1. 以本文件所在项目为边界；项目根是本技能目录的 `../..`。先读项目根下的 `CLAUDE.md`、`.42cog/` 四份、`state/board.md`、`state/memory/MEMORY.md`。目录语义见 `.42cog/cog.md`，命名见 `specs/README.md`。
+1. 以本文件所在项目为边界；项目根是本技能目录的 `../..`。先读项目根下的 `CLAUDE.md`、`.42cog/intent.md`、`.42cog/real.md`、`.42cog/cog.md`、`.42cog/meta.md`、`state/board.md`、`state/memory/MEMORY.md`。目录语义见 `.42cog/cog.md`，命名见 `specs/README.md`。
 2. 只补缺失的骨架，不重置或覆盖既有材料。保留唯一意向正本，不把方向复制到状态板。
-3. 新项目起草方向并请负责人过目；询问参考项目、远程地址和放权边界。接续时沿用已明确的决定，仅在事实或授权变化时重新确认。博客仓库不等于本项目的 remote。
-4. 按方向核查 `scripts/check-tools.sh` 的专属清单、`.python-version` 和最小 CI；只执行已审阅的脚本，不安装或发布。
+3. 新项目的方向草稿写在唯一正本 `.42cog/intent.md`，明确标注「待负责人确认」，请负责人过目；状态板只记确认状态及真实确认依据，不复制方向，不把草稿当已确认。负责人确认后更新该状态，再放行后续步骤。询问参考项目、远程地址和放权边界。接续时沿用已明确的决定，仅在事实或授权变化时重新确认。博客仓库不等于本项目的 remote。
+4. 按方向核查 `scripts/check-tools.sh` 的专属清单、`.python-version` 和最小 CI。「已审阅」指本会话已完整读取脚本，核对其读取、写入、网络与子进程行为不超出授权，并在状态板记下脚本路径与审阅依据；脚本变更后重新审阅。未经审阅不执行；发现越权副作用先取得明确授权，不以审阅替代授权，不安装或发布。
 5. 执行 `python3 -I scripts/check-manifests.py`、`python3 -I scripts/check-system.py`、`bash scripts/check-tools.sh`；检查本次退出码和告警，不以命令存在证明账号已接通。
 6. 新空会话仅输入意向书，核对方向、不做什么和下一步。方法评审分别记录本地审查与跨谱系审查，未经外发授权不调用外部评审服务。
 7. 更新状态板与里程碑；给出下一步入口，不代建 `hi.md`。
