@@ -6,7 +6,7 @@
 - 系统码：`mz`。
 - 负责人：用户本人。
 - 创建日期：2026-10-09。
-- 状态：本地初始化与规则验证完成；跨谱系方法评审尚未完成，未进入作品生产。
+- 状态：本地初始化、规则验证与跨谱系方法评审完成；方法文本可进入研究，尚未进行人的作品定标或作品生产。实际评审与剩余非阻塞事项见 `../docs/reviews/004_cross-lineage-method-review.md`。
 - 项目类型：个人品牌内容营销与多平台协同项目。
 - 方向唯一正本：`intent.md`。
 
@@ -14,14 +14,14 @@
 
 - 本地目录：`/Users/nv/proj.xt.com/manzi`。
 - 作品区：`content/`，实体定义见 `cog.md`。
-- 本项目远程仓库：`https://github.com/AustinXT/NVoyager`，已配置为 `origin`；尚未验证远程存在性或推送，下表博客仓库不是本项目的远程仓库。
+- 本项目远程仓库：`https://github.com/AustinXT/NVoyager`，已配置为 `origin`，初次提交与推送已核验；当前引用见 Git，最近核验见 `../state/board.md`。下表博客仓库不是本项目的远程仓库。
 - 与默认六组的差异：无。
 
 ## 平台登记（用户提供，接入状态未验证）
 
 | 平台 | 账号或资源标识 | 本项目与它的关系 |
 |---|---|---|
-| 博客 | https://github.com/AustinXT/AustinXT.github.io | 本地检出 `/Users/nv/proj.xt.com/05Blog`；已只读核实 Hugo 与 FixIt 文件配置，未验证在线站点或执行构建 |
+| 博客 | https://github.com/AustinXT/AustinXT.github.io | 旧博客参考原件现位于 `/Users/nv/proj.xt.com/manzi-blog/vault/raw/05blog`，由独立博客项目管理；已只读核实原 Git 身份与 HEAD，保留 Hugo／FixIt 历史参考，不据此指定新博客技术栈，未验证在线站点或执行构建 |
 | 微信公众号 | 智能时代蛮子 | 后台接入项目位于 `/Users/nv/proj.xt.com/github-explorer`；已核实排版与草稿投递代码存在，账号权限、远端 runner 和实际可用性未验证 |
 | 小红书 | NightVoyager42 | 既有账号，认证和发布方式尚未核实 |
 | B站 | UID:318902945 | 既有账号，认证和发布方式尚未核实 |
@@ -41,5 +41,6 @@
 - 本地方法与验证工具：`../scripts/check-tools.sh`；专属清单已补全，内容正本为 Markdown，验证脚本仅依赖 Python 标准库。
 - 运行时版本：唯一锁定正本为 `../.python-version`，本项目不继承关联项目的全部技术栈。
 - 最小 CI：`../.github/workflows/validate.yml`，仅规则验证，不登录账号、不发布。
+- OpenCode 模型与无工具评审代理：`../opencode.json` 为项目配置正本；外发评审采用空隔离目录，不在项目根直接调用模型，模型调用与放行记录见 `../state/board.md`。
 - 平台账号与关联项目：见平台登记；凭据不在本项目元数据中保存。
 - 预算、协作者与平台权限现状：见 `real.md`。
