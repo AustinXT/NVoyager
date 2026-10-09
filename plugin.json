@@ -1,0 +1,8 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mz",
+  "version": "0.1.0",
+  "description": "智能时代蛮子",
+  "repository": "https://github.com/AustinXT/NVoyager",
+  "keywords": ["aias", "personal-brand", "content"]
+}
